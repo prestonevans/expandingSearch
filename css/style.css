@@ -1,7 +1,17 @@
+:root {
+  --white: white;
+  --transparentWhite: rgba(255, 255, 255, 0.6);
+  --transition: .3s ease;
+}
+
 * {
   border: 0;
   padding: 0;
   margin: 0;
+}
+
+*:focus {
+  outline: none;
 }
 
 body {
@@ -9,11 +19,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(1200deg, #264653, #f4a261);
+  background-image: linear-gradient(120deg, #264653, #f4a261);
 }
 
 form {
-  position: relative;
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -21,18 +30,18 @@ form {
 form input {
   font-size: 1.25rem;
   width: 0;
-  transition: width 0.3s ease;
+  transition: width var(--transition);
   background-color: transparent;
-  border-bottom: 2px solid white;
-  color: white;
-  caret-color: white;
+  border-bottom: 2px solid var(--white);
+  color: var(--white);
+  caret-color: var(--white);
   padding: 0.25em 0;
 }
 form input::placeholder {
-  color: rgba(255, 255, 255, 0.57);
+  color: var(--transparentWhite);
 }
 form input:focus {
-  outline: none;
+  width: 30ch;
 }
 form button {
   background-color: transparent;
@@ -41,7 +50,7 @@ form button:hover {
   cursor: pointer;
 }
 form button i {
-  color: white;
+  color: var(--white);
   font-size: 2rem;
 }
 
