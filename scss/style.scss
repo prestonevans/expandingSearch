@@ -3,3 +3,50 @@
 	padding: 0;
 	margin: 0;
 }
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(1200deg, #264653, #f4a261);
+}
+
+form {
+	position: relative;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+
+	input {
+		font-size: 1.25rem;
+		width: 0;
+		transition: width .3s ease;
+		background-color: transparent;
+		border-bottom: 2px solid white;
+		color: white;
+		caret-color: white;
+		padding: .25em 0;
+		&::placeholder {
+			color: rgba(255, 255, 255, 0.57);
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+	}
+
+
+	button {
+		background-color: transparent;
+		&:hover {
+			cursor: pointer;
+		}
+		i {
+			color: white;
+			font-size: 2rem;
+		}
+	}
+}
+
